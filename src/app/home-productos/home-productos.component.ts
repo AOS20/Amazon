@@ -11,7 +11,7 @@ import { Producto } from '../producto.model';
 
 })
 export class HomeProductosComponent implements OnInit {
-  productos: Producto[] = [];
+  productos: Producto[] | undefined;
    constructor(private productoService: ProductoService) { } 
    ngOnInit(): void { 
     this.productos = this.productoService.obtenerProductos().slice(0, 4);
